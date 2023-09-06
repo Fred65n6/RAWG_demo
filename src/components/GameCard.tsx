@@ -4,20 +4,20 @@ import { Game } from "../hooks/useGames";
 import { Heading } from "@chakra-ui/layout";
 
 interface Props {
-  game: Game;
+game: Game;
 }
 
 const GameCard = ({ game }: Props) => {
-  return (
+return (
     <>
-      <Card>
+    <Card>
         <Image src={game.background_image} />
         <CardBody>
-          <Heading>{game.name}</Heading>
+        <Heading>{game.name}</Heading>
         </CardBody>
-      </Card>
+    </Card>
     </>
-  );
+);
 };
 
 export default GameCard;
