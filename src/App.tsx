@@ -3,6 +3,8 @@ import { Show, Hide } from '@chakra-ui/react'
 import './App.css'
 import NavBar from './components/NavBar'
 import { useColorModeValue} from "@chakra-ui/react";
+import GameGrid from './components/GameGrid';
+// import ProductList from "../src/components/ProductList.tsx";
 
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
     </GridItem>
   </Show>
   <GridItem color={color} pl='2' bg='green.300' area={'main'}>
-    Main
+    <GameGrid></GameGrid>
   </GridItem>
 </Grid>
     </>
