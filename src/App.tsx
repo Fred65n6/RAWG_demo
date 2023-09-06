@@ -1,9 +1,14 @@
 import { Grid, GridItem } from '@chakra-ui/react'
 import { Show, Hide } from '@chakra-ui/react'
 import './App.css'
-import NavBar from '../src/NavBar'
+import NavBar from './components/NavBar'
+import { useColorModeValue} from "@chakra-ui/react";
+
 
 function App() {
+
+  const color = useColorModeValue('black', 'white')
+
   return (
     <>
     <Grid
@@ -15,7 +20,7 @@ function App() {
       
     }
   }
-  gridTemplateRows={'50px 1fr 30px'}
+  gridTemplateRows={'auto 1fr 30px'}
   gridTemplateColumns={{base:'1fr', lg: '200px 1fr'}}
   h='200px'
   gap='1'
@@ -26,11 +31,11 @@ function App() {
     <NavBar></NavBar>
   </GridItem>
   <Show above="lg">
-    <GridItem pl='2' bg='pink.300' area={'aside'}>
+    <GridItem color={color} pl='2' bg='pink.300' area={'aside'}>
       Aside
     </GridItem>
   </Show>
-  <GridItem pl='2' bg='green.300' area={'main'}>
+  <GridItem color={color} pl='2' bg='green.300' area={'main'}>
     Main
   </GridItem>
 </Grid>
