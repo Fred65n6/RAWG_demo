@@ -25,19 +25,18 @@ function App() {
   gridTemplateRows={'auto 1fr 30px'}
   gridTemplateColumns={{base:'1fr', lg: '200px 1fr'}}
   h='200px'
-  gap='1'
   color='blackAlpha.700'
   fontWeight='bold'
 >
-  <GridItem pl='2' bg='orange.300' area={'nav'}>
+  <GridItem position={"fixed"} width={"100%"} zIndex={"100"} pl='2' bg='orange.300' area={'nav'}>
     <NavBar></NavBar>
   </GridItem>
   <Show above="lg">
-    <GridItem color={color} pl='2' bg='pink.300' area={'aside'}>
-      Aside
+    <GridItem position={"sticky"}  marginTop={"60px"} color={color} pl='2' bg='pink.300' area={'aside'}>
+      <GridItem position={"fixed"}>Menu</GridItem>
     </GridItem>
   </Show>
-  <GridItem color={color} pl='2' bg='green.300' area={'main'}>
+  <GridItem color={color} paddingTop={"70px"} pl='2' bg='green.300' area={'main'}>
     <GameGrid></GameGrid>
   </GridItem>
 </Grid>
