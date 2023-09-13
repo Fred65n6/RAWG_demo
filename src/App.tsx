@@ -10,6 +10,7 @@ import GameGrid from './components/GameGrid';
 function App() {
 
   const color = useColorModeValue('black', 'white')
+  const bg = useColorModeValue('white', 'black')
 
   return (
     <>
@@ -28,15 +29,15 @@ function App() {
   color='blackAlpha.700'
   fontWeight='bold'
 >
-  <GridItem position={"fixed"} width={"100%"} zIndex={"100"} pl='2' bg='orange.300' area={'nav'}>
+  <GridItem position={"fixed"} width={"100%"} zIndex={"100"} pl='2' bg={bg} area={'nav'}>
     <NavBar></NavBar>
   </GridItem>
   <Show above="lg">
-    <GridItem position={"sticky"}  marginTop={"60px"} color={color} pl='2' bg='pink.300' area={'aside'}>
+    <GridItem position={"sticky"}  marginTop={"60px"} color={color} pl='2' bg={bg} area={'aside'}>
       <GridItem position={"fixed"}>Menu</GridItem>
     </GridItem>
   </Show>
-  <GridItem color={color} paddingTop={"70px"} pl='2' bg='green.300' area={'main'}>
+  <GridItem color={color} paddingTop={"70px"} pl='2' bg={bg} area={'main'}>
     <GameGrid></GameGrid>
   </GridItem>
 </Grid>
