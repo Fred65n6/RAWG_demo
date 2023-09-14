@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import { useColorModeValue} from "@chakra-ui/react";
 import GameGrid from './components/GameGrid';
+import GenreList from './components/GenreList';
 // import ProductList from "../src/components/ProductList.tsx";
 
 
@@ -34,7 +35,9 @@ function App() {
   </GridItem>
   <Show above="lg">
     <GridItem position={"sticky"}  marginTop={"60px"} color={color} pl='2' bg={bg} area={'aside'}>
-      <GridItem position={"fixed"}>Menu</GridItem>
+      <GridItem position={"fixed"}>
+        <GenreList/>
+        </GridItem>
     </GridItem>
   </Show>
   <GridItem color={color} paddingTop={"70px"} pl='2' bg={bg} area={'main'}>
